@@ -22,7 +22,6 @@
       version    : 'v2.2'
     });
   };
-
   (function(d, s, id){
      var js, fjs = d.getElementsByTagName(s)[0];
      if (d.getElementById(id)) {return;}
@@ -31,6 +30,7 @@
      fjs.parentNode.insertBefore(js, fjs);
    }(document, 'script', 'facebook-jssdk'));
 </script>
+
   <div id="main">
     <h1>You're ready to use Parse!</h1>
 
@@ -40,40 +40,17 @@
       <li><a href="https://www.parse.com/docs/js_guide">Parse JavaScript Guide</a></li>
       <li><a href="https://www.parse.com/docs/js">Parse JavaScript API Documentation</a></li>
     </ul>
-
-    <div style="display:none" class="error">
-      Looks like there was a problem saving the test object. Make sure you've set your application ID and javascript key correctly in the call to <code>Parse.initialize</code> in this file.
-    </div>
-
-    <div style="display:none" class="success">
-      <p>We've also just created your first object using the following code:</p>
-      
-        <code>
-          var TestObject = Parse.Object.extend("TestObject");<br/>
-          var testObject = new TestObject();<br/>
-          testObject.save({foo: "bar"});
-        </code>
-    </div>
   </div>
+  
   <div
   class="fb-like"
   data-share="true"
   data-width="450"
   data-show-faces="true">
 </div>
+
   <script type="text/javascript">
     Parse.initialize("LACHrvB9NO84uTwEV050aAuvrjCV13B781bXLBrk", "X6T1Ql3o9yfML77UdX38mUJnjf8etgRwoHryMos9");
-    
-    var TestObject = Parse.Object.extend("TestObject");
-    var testObject = new TestObject();
-      testObject.save({foo: "bar"}, {
-      success: function(object) {
-        $(".success").show();
-      },
-      error: function(model, error) {
-        $(".error").show();
-      }
-    });
   </script>
 </body>
 </html>
