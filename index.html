@@ -14,7 +14,23 @@
 </head>
 
 <body>
-  
+  <script>
+  window.fbAsyncInit = function() {
+    FB.init({
+      appId      : '327312504141216',
+      xfbml      : true,
+      version    : 'v2.2'
+    });
+  };
+
+  (function(d, s, id){
+     var js, fjs = d.getElementsByTagName(s)[0];
+     if (d.getElementById(id)) {return;}
+     js = d.createElement(s); js.id = id;
+     js.src = "//connect.facebook.net/en_US/sdk.js";
+     fjs.parentNode.insertBefore(js, fjs);
+   }(document, 'script', 'facebook-jssdk'));
+</script>
   <div id="main">
     <h1>You're ready to use Parse!</h1>
 
@@ -39,7 +55,12 @@
         </code>
     </div>
   </div>
-
+  <div
+  class="fb-like"
+  data-share="true"
+  data-width="450"
+  data-show-faces="true">
+</div>
   <script type="text/javascript">
     Parse.initialize("LACHrvB9NO84uTwEV050aAuvrjCV13B781bXLBrk", "X6T1Ql3o9yfML77UdX38mUJnjf8etgRwoHryMos9");
     
